@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Gezegenine Yolculuk</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+            color: #273849;
+            font-weight: bold;
+        }
+
+        body {
+            margin-bottom: 100px;
+        }
+
+        .logoCapsule {
+            width: 100%;
+        }
+
+        .logoCapsule img {
+            width: 35%;
+        }
+
+        .logoCapsule h2 {
+            font-size: 250%;
+            margin: 2% 0 0 1%;
+        }
+
+        .logoCapsule * {
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+
+        .mission {
+            margin-top: 5%;
+        }
+
+        .missionNumb {
+            border-bottom: 1px solid #273849;
+            padding: 1%;
+            margin: 1%;
+        }
+
+        .messageWorld textarea {
+            width: 40%;
+            height: 60px;
+            display: block;
+            margin: 0 0 1% 10%;
+            border: 1px solid #273849;
+            resize: none;
+        }
+
+        .messageWorld .fromMessage {
+            display: inline;
+            margin-left: 45%;
+        }
+
+        .messageStatus, .messageInfo, .messageTime{
+            margin-left: 10%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="planetAPP">
+        <div class="logoCapsule">
+            <img src="./img/vue-planet.png" alt="">
+            <h2>Vue <br> Gezegenine Yolculuk</h2>
+        </div>
+
+        <div class="firstMission mission">
+            <h2 class="missionNumb">1. Görev</h2>
+            <div class="messageWorld">
+                <textarea v-model="message"></textarea>
+                <p class="fromMessage">Evan</p>
+                <button v-on:click="messageSend">Gönder</button>
+                <p class="messageStatus">{{ messageStatus }}</p>
+                <p class="messageInfo"> {{ from }} <br> {{ messageContent }}</p>
+                <p class="messageTime">{{ time }}</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#planetAPP',
+            data: {
+                message: '', 
+                from: '',
+                messageStatus: '',
+                messageContent: '',
+                time: ''
+            },
+            methods: {
+                messageSend: function () {
+                    this.messageStatus = 'Mesaj gönderiliyor..';
+                    var planetAPP = this;
+                    
+                    setTimeout(function(){
+                        planetAPP.messageStatus = 'Mesajınız başarıyla gönderildi.';
+                        planetAPP.from = 'Gönderen: Evan';
+                        planetAPP.messageContent = planetAPP.message;
+                        planetAPP.time =  new Date().toLocaleString();
+                    }, 2000);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
