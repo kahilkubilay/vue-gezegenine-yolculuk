@@ -1,0 +1,118 @@
+
+        * {
+          margin: 0;
+          padding: 0;
+          font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+          color: #273849;
+          font-weight: bold;
+      }
+
+      body {
+          margin-bottom: 100px;
+      }
+
+      .logoCapsule {
+          width: 100%;
+      }
+
+      .logoCapsule img {
+          width: 35%;
+      }
+
+      .logoCapsule h2 {
+          font-size: 250%;
+          margin: 2% 0 0 1%;
+      }
+
+      .logoCapsule * {
+          display: block;
+          margin: auto;
+          text-align: center;
+      }
+
+      .mission {
+          margin-top: 5%;
+      }
+
+      .missionNumb {
+          border-bottom: 1px solid #273849;
+          padding: 1%;
+          margin: 1%;
+      }
+
+      /*message to the world*/
+
+      .messageWorld textarea {
+          width: 40%;
+          height: 60px;
+          display: block;
+          margin: 0 0 1% 10%;
+          border: 1px solid #273849;
+          resize: none;
+      }
+
+      .messageWorld .fromMessage {
+          display: inline;
+          margin-left: 45%;
+      }
+
+      .messageStatus,
+      .messageInfo,
+      .messageTime {
+          margin-left: 10%;
+      }
+
+      /*message to the world*/
+
+      /*progress bar*/
+
+      .progressBar {
+          width: 75%;
+          height: 30px;
+          border: 2px solid #354c63;
+          margin: 50px auto;
+          border-radius: 20px;
+          overflow: hidden;
+      }
+
+      .progress {
+          width: 0;
+          height: 30px;
+          background-color: #41b883;
+      }
+
+      .stage, .status{
+          width: 100px;
+          margin: auto;
+          font-size: 30px;
+          color: #354c63;
+          text-align: center;
+      }
+
+      .status{
+          width: 350px;
+      }
+
+      .btn {
+          width: 150px;
+          margin: auto;
+          position: relative;
+          top: 50px;
+          border-radius: 4px;
+          background-color: #354c63;
+          border: none;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 22px;
+          padding: 10px;
+          cursor: pointer;
+      }
+
+      .decrase {
+          left: 40%;
+      }
+
+      .increase {
+          left: 45%;
+      }
+
